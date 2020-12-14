@@ -1,7 +1,7 @@
 # FlexCompany
 
 ## Project brief
-Build a company website using FlexBox and CSSGrid.  Layout must adapt to screen re-sizing
+Build a company website using FlexBox and CSSGrid.  Layout must include responsive design aadpting layout depending on screen size
 
 ## Introduction
 Build a website for a company selling homemade, fabric face coverings.
