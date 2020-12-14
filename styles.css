@@ -1,0 +1,236 @@
+body {
+    background-color: lightgrey;
+    color: black;
+    font-size: 22px;
+    font-family: "Helvetica";
+    text-align:center;
+    
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    width:100%;
+    
+}
+h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    width:100%;
+    
+}
+h3 {
+    font-size: 1.2rem;
+    width:100%;
+    
+}
+header {
+    margin:0 auto;
+}
+
+.header-container {
+    background-color:lightgrey;
+    height:70px;
+    width:95%; 
+    margin:auto;
+    border-bottom:5px solid black;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    /*position:fixed;*/
+    z-index:5;  /* Ensure this comes to the front */
+    padding: 10px;
+   
+}
+
+/* Style for the logo */
+.header-container img {
+    padding-left:10px;
+    height:65px; 
+    border-radius: 5px;
+}
+
+/* Underline the navigation text */
+nav a {
+    text-decoration:underline;
+    color:rgb(1, 30, 82);   
+}
+
+/* Display navigation items next to each other*/
+nav span {
+    display:inline-block;
+    padding: 20px 10px;   
+}
+
+
+main {
+    width:95%;
+    margin:auto;
+}
+
+
+.mission {
+    margin:auto;
+    display:flex;
+    height: 100px;
+    /*width:95%;*/
+    justify-content: center;
+    align-items: center; 
+}
+
+.mission p {
+    font-family: "Bree Serif", serif;
+    color:black;
+}
+/* As li are inline the list-style-type will not work so need to */
+/* manually insert bullet before a list item */
+.products ul li:before {
+    content: "\2022  "
+ }
+
+.products li {
+    display:inline-block;
+    padding-right:10px;
+}
+
+.products h2 {
+    width:100%;
+    
+}
+.products-grid {
+    display:grid;
+    width:95%;
+    margin:auto;
+    grid-template: repeat(3, 1fr) / repeat(2, 2fr);
+    grid-gap: 2px;
+    grid-template-areas: "row1-col1 row1-col2"
+                        "row2-col1 row2-col2"
+                        "row3-col1 row3-col2";
+    
+    align-items:center;  /* centred paragraph text in cell */
+    
+}
+
+.products-grid img {
+    justify-self:center;
+    padding-left: 10px;
+    border-radius: 10%;
+    opacity:0.8;
+}
+.products-grid p {
+    justify-self:center;
+    align-self:end;
+    font-size: 1.5rem;
+    font-weight:bold;
+    color:black;
+    z-index:3;
+}
+
+.product1 {
+    grid-area: row1-col1;
+}
+
+
+.product2 {
+    grid-area: row1-col2;
+}
+
+.product3 {
+    grid-area: row2-col1;
+}
+
+.product4 {
+    grid-area: row2-col2;
+}
+
+.product5 {
+        grid-area: row3-col1;
+}
+
+/* Styles for Who's who section */
+.team-container {
+    width:100%;
+    margin:auto;
+    display:flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap:wrap;
+}
+
+.team-container figure {
+    display:inline-block;    
+    flex: 1 1;
+}
+
+/* Styles for Contact section */
+.contact-container { 
+    width:95%;
+    background-image: url("resources/images/contact-background.png");
+    background-repeat: no-repeat;
+    margin:auto;
+    
+}
+.contact-container h3 {
+    text-align: center;
+    font-weight:bold;
+    padding:5px;
+}
+
+/* Styles for footer section */
+footer {
+    text-align:right;
+    font-size:0.8rem;
+    display:block;
+    padding-right:20px;
+}
+/* Styles for mobile phones */
+
+@media only screen and (max-width:600px) {
+    .products-grid {
+        display:grid;
+        width:95%;
+        margin:auto;
+        grid-template: repeat(6, 1fr) / 1fr;
+        grid-gap: 2px;
+        grid-template-areas: "row1-col1"
+                            "row2-col1"
+                            "row3-col1"
+                            "row4-col1"
+                            "row5-col1"
+                            "row6-col1";
+        
+        align-items:center;  /* centred paragraph text in cell */
+        
+    }
+
+    .product1 {
+        grid-area: row1-col1;
+    }
+
+    .product2 {
+        grid-area: row2-col1;
+    }
+
+    .product3 {
+        grid-area: row3-col1;
+    }
+    
+    .product4 {
+        grid-area: row4-col1;
+    }
+    
+    .product5 {
+            grid-area: row5-col1;
+    }
+    body {
+        font-size:16px;
+    }
+    a {
+        font-size:0.9rem;
+    }    
+    .team-container figure {
+        display:block;
+       
+        flex: 1 1;
+    }
+}
